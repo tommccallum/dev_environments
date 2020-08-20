@@ -1,0 +1,25 @@
+set number
+"set exrc
+"set secure
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+set colorcolumn=110
+highlight ColorColumn ctermbg=darkgray
+"augroup project
+"   autocmd!
+"   autocmd BufRead,BufNewFile *.hpp,*.cpp set filetype=cpp.doxygen
+"augroup END
+let &path.="P/include,P/src,"
+set includeexpr=substitute(v:fname,'\\.','/','g')
+ " path to directory where library can be found
+ let g:clang_library_path='/usr/lib64/llvm/lib'
+ " or path directly to the library file
+ let g:clang_library_path='/usr/lib64/libclang.so.8'
+colorscheme wombat
+" in makefiles, don't expand tabs to spaces, since actual tab characters are
+" needed, and have indentation at 8 chars to be sure that all indents are tabs
+" (despite the mappings later):
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+autocmd FileType am set noexpandtab shiftwidth=8 softtabstop=0

@@ -1,0 +1,9 @@
+#ifndef VERSION_HPP
+#define VERSION_HPP
+// the configured options and settings for new_project
+#define new_project_VERSION_MAJOR  @new_project_VERSION_MAJOR@
+#define new_project_VERSION_MINOR  @new_project_VERSION_MINOR@
+#define new_project_BUILD_DATE     "@TODAY@"
+// TODO this will be a cmake variable eventually.  It currently works with executable but not with test, error is about missing version.hpp.
+//#define DEBUG 1
+#endif /* VERSION_HPP */
